@@ -3,8 +3,8 @@ LABEL org.opencontainers.image.authors="fengmingxing@bytedance.com"
 ENV PATH="/root/miniconda3/bin:${PATH}"
 ARG DEBIAN_FRONTEND=noninteractive
 #火山vpc环境下构建可以通过fasttrack加速
-ENV http_proxy=http://100.68.174.39:3128
-ENV https_proxy=http://100.68.174.39:3128
+#ENV http_proxy=http://100.68.174.39:3128
+#ENV https_proxy=http://100.68.174.39:3128
 ENV TZ=Europe/Moscow
 RUN apt-get update && apt-get install -y git ffmpeg libsm6 libxext6 wget && \
     wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.5.2-0-Linux-x86_64.sh && \
